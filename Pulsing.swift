@@ -89,6 +89,5 @@ class Pulsing: CALayer {
         
     }
     
-    // 3 Aug 6:56 ANUP SIR PROMISED ICECREAM PARTY
     
 }
