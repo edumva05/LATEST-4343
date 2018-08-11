@@ -32,6 +32,7 @@ class ButtonsView: UIView {
         scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height))
         
         
+        
         self.addSubview(scrollView!)
         scrollView!.backgroundColor = UIColor.white
         scrollView?.showsHorizontalScrollIndicator = false
@@ -55,9 +56,12 @@ class ButtonsView: UIView {
             let buttonWidth = button.frame.size.width
             currentWidth = currentWidth + buttonWidth + (i == wordsArray.count - 1 ? 0 : padding)
             scrollView!.addSubview(button)
+            
+    
             button.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
         }
         
+
         scrollView!.contentSize = CGSize(width:currentWidth,height:scrollView!.frame.size.height)
         self.addMovingView()
     }
@@ -79,45 +83,40 @@ class ButtonsView: UIView {
     func animageMovingView(sender : UIButton){
         
   
+              scrollView!.subviews.forEach ({ ($0 as? UIButton)?.removeFromSuperview() })
         
-     /*   scrollView?.removeFromSuperview()
-        
-        
-        scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height))
-        
-       //  self.removeSubview(scrollView!)
-        self.addSubview(scrollView!)
-        scrollView!.backgroundColor = UIColor.white
-        scrollView?.showsHorizontalScrollIndicator = false
-        scrollView?.showsVerticalScrollIndicator = false
+     
         self.calculateButtonWidths()
         let totalWidthOfButtons = buttonWidths.reduce(10.0,+)
         let isBigButton = buttonWidths.contains(where: {$0 > (scrollView?.frame.size.width)!/2})
         
+        var privatewidth = currentWidth
+        
         for i in 0..<wordsArray.count {
+
             let text = wordsArray[i]
             var button = UIButton()
             if totalWidthOfButtons >= self.frame.size.width || isBigButton {
-                button = UIButton(frame: CGRect(x:currentWidth, y: 0.0, width: buttonWidths[i], height: self.frame.size.height))
+                button = UIButton(frame: CGRect(x:privatewidth, y: 0.0, width: buttonWidths[i], height: self.frame.size.height))
             }else{
-                button = UIButton(frame: CGRect(x:currentWidth, y: 0.0, width: self.frame.size.width/CGFloat(self.buttonWidths.count), height: self.frame.size.height))
+                button = UIButton(frame: CGRect(x:privatewidth, y: 0.0, width: self.frame.size.width/CGFloat(self.buttonWidths.count), height: self.frame.size.height))
                 buttonWidths[i] = self.frame.size.width/CGFloat(self.buttonWidths.count)
             }
             button.tag = i
             button.setTitle(text, for: .normal)
             button.setTitleColor(UIColor .gray, for: .normal)
             let buttonWidth = button.frame.size.width
-            currentWidth = currentWidth + buttonWidth + (i == wordsArray.count - 1 ? 0 : padding)
+            privatewidth = privatewidth + buttonWidth + (i == wordsArray.count - 1 ? 0 : padding)
             scrollView!.addSubview(button)
             button.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
         }
         
         scrollView!.contentSize = CGSize(width:currentWidth,height:scrollView!.frame.size.height)
-        self.addMovingView()
- */
-        
+
+ 
+      
         sender.setTitleColor(UIColor .black, for: .normal)
-        sender.title(for: .selected)
+      
         
         
         UIView.animate(withDuration: 0.20, delay: 0, options: [UIViewAnimationOptions.curveEaseInOut], animations: {

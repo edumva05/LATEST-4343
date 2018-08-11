@@ -30,6 +30,7 @@ class AboutUs: UIViewController, UIScrollViewDelegate, ButtonProtocol {
         
         if withTag == 0
         {
+            
             let testFrame = CGRect(origin: CGPoint(x:20,y :136), size: CGSize(width: 414, height: 414))
             let testView : UIView = UIView(frame: testFrame)
             testView.alpha=0.5
