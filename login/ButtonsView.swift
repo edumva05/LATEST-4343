@@ -86,7 +86,7 @@ class ButtonsView: UIView {
               scrollView!.subviews.forEach ({ ($0 as? UIButton)?.removeFromSuperview() })
         
      
-        self.calculateButtonWidths()
+
         let totalWidthOfButtons = buttonWidths.reduce(10.0,+)
         let isBigButton = buttonWidths.contains(where: {$0 > (scrollView?.frame.size.width)!/2})
         
@@ -95,23 +95,41 @@ class ButtonsView: UIView {
         for i in 0..<wordsArray.count {
 
             let text = wordsArray[i]
-            var button = UIButton()
+            
+            var button1 = UIButton()
             if totalWidthOfButtons >= self.frame.size.width || isBigButton {
-                button = UIButton(frame: CGRect(x:privatewidth, y: 0.0, width: buttonWidths[i], height: self.frame.size.height))
+                button1 = UIButton(frame: CGRect(x:privatewidth, y: 0.0, width: buttonWidths[i], height: self.frame.size.height))
             }else{
-                button = UIButton(frame: CGRect(x:privatewidth, y: 0.0, width: self.frame.size.width/CGFloat(self.buttonWidths.count), height: self.frame.size.height))
+                button1 = UIButton(frame: CGRect(x:privatewidth, y: 0.0, width: self.frame.size.width/CGFloat(self.buttonWidths.count), height: self.frame.size.height))
                 buttonWidths[i] = self.frame.size.width/CGFloat(self.buttonWidths.count)
             }
-            button.tag = i
-            button.setTitle(text, for: .normal)
-            button.setTitleColor(UIColor .gray, for: .normal)
-            let buttonWidth = button.frame.size.width
-            privatewidth = privatewidth + buttonWidth + (i == wordsArray.count - 1 ? 0 : padding)
-            scrollView!.addSubview(button)
-            button.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
+            button1.tag = i
+            button1.setTitle(text, for: .normal)
+            print(button1.title(for: .normal) as Any)
+            button1.setTitleColor(UIColor .black, for: .normal)
+            let buttonWidth1 = button1.frame.size.width
+            privatewidth = privatewidth + buttonWidth1 + (i == wordsArray.count - 1 ? 0 : padding)
+            scrollView!.addSubview(button1)
+            button1.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
+        
+            var button2 = UIButton()
+            if totalWidthOfButtons >= self.frame.size.width || isBigButton {
+                button2 = UIButton(frame: CGRect(x:privatewidth, y: 0.0, width: buttonWidths[i], height: self.frame.size.height))
+            }else{
+                button2 = UIButton(frame: CGRect(x:privatewidth, y: 0.0, width: self.frame.size.width/CGFloat(self.buttonWidths.count), height: self.frame.size.height))
+                buttonWidths[i] = self.frame.size.width/CGFloat(self.buttonWidths.count)
+            }
+            button2.tag = i
+            button2.setTitle(text, for: .normal)
+            print(button2.title(for: .normal) as Any)
+            button2.setTitleColor(UIColor .black, for: .normal)
+            let buttonWidth2 = button2.frame.size.width
+            privatewidth = privatewidth + buttonWidth2 + (i == wordsArray.count - 1 ? 0 : padding)
+            scrollView!.addSubview(button2)
+            button2.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
         }
         
-        scrollView!.contentSize = CGSize(width:currentWidth,height:scrollView!.frame.size.height)
+        scrollView!.contentSize = CGSize(width:privatewidth,height:scrollView!.frame.size.height)
 
  
       
