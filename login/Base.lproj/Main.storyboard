@@ -50,10 +50,9 @@
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv5-la-f5B">
-                                <rect key="frame" x="284" y="420" width="200" height="184"/>
-                                <state key="normal" image="login theme copy 2"/>
-                                <state key="highlighted" image="login theme copy 2-1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv5-la-f5B">
+                                <rect key="frame" x="316.5" y="434.5" width="135" height="155"/>
+                                <state key="normal" image="Student Icon Text"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="60"/>
@@ -63,10 +62,9 @@
                                     <action selector="childact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="au1-rU-Ccb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRB-D9-T6H">
-                                <rect key="frame" x="53.5" y="420" width="200.5" height="184"/>
-                                <state key="normal" backgroundImage="Teacher Icon Text"/>
-                                <state key="highlighted" image="login theme copy-1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRB-D9-T6H">
+                                <rect key="frame" x="86.5" y="435" width="135" height="155"/>
+                                <state key="normal" image="Teacher Icon Text"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="60"/>
@@ -76,10 +74,9 @@
                                     <action selector="teachact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3yU-pT-mva"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-N8-80L">
-                                <rect key="frame" x="514" y="420" width="200.5" height="184"/>
-                                <state key="normal" image="login theme copy 3"/>
-                                <state key="highlighted" image="login theme copy 3-1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-N8-80L">
+                                <rect key="frame" x="547" y="434.5" width="135" height="155"/>
+                                <state key="normal" image="Parent Icon Text"/>
                                 <connections>
                                     <action selector="parentact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7A-2G-Acz"/>
                                 </connections>
@@ -157,8 +154,8 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mex-nK-E4h">
-                                <rect key="frame" x="47" y="47" width="60" height="60"/>
-                                <state key="normal" title="Button" image="backButtonImage"/>
+                                <rect key="frame" x="60" y="47.5" width="35" height="60"/>
+                                <state key="normal" image="backButtonApp"/>
                                 <connections>
                                     <segue destination="SmL-9G-tFF" kind="show" id="GyB-0o-Tvs"/>
                                 </connections>
@@ -169,7 +166,7 @@
                             <constraint firstItem="uRB-D9-T6H" firstAttribute="width" secondItem="fv5-la-f5B" secondAttribute="width" id="0B6-1P-XFQ"/>
                             <constraint firstItem="mex-nK-E4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.2" id="15T-ya-xyt"/>
                             <constraint firstItem="0nv-FC-ol4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.7" id="1B4-ho-ONF"/>
-                            <constraint firstItem="mex-nK-E4h" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="60/768" id="1Kz-b6-MG4"/>
+                            <constraint firstItem="mex-nK-E4h" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="35/768" id="1Kz-b6-MG4"/>
                             <constraint firstItem="fi2-N8-80L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.6" id="2qg-oV-qfh"/>
                             <constraint firstItem="Nwa-pS-FBZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="31K-KE-2LJ"/>
                             <constraint firstItem="vIg-B0-pZe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.17" id="3Xb-84-bE6"/>
@@ -183,8 +180,8 @@
                             <constraint firstItem="fi2-N8-80L" firstAttribute="height" secondItem="fv5-la-f5B" secondAttribute="height" id="Opb-Pd-UGy"/>
                             <constraint firstItem="mex-nK-E4h" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="60/1024" id="QJc-LO-fhr"/>
                             <constraint firstItem="JUi-DI-Ddn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RrB-pb-c36"/>
-                            <constraint firstItem="fv5-la-f5B" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="132/736" id="TRf-av-JL6"/>
-                            <constraint firstItem="fv5-la-f5B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="108/414" id="TbW-qc-uAe"/>
+                            <constraint firstItem="fv5-la-f5B" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="155/1024" id="TRf-av-JL6"/>
+                            <constraint firstItem="fv5-la-f5B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="135/768" id="TbW-qc-uAe"/>
                             <constraint firstItem="uRB-D9-T6H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XSL-Qb-cag"/>
                             <constraint firstItem="JUi-DI-Ddn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="90/1024" id="YWK-Hc-kLu"/>
                             <constraint firstItem="JUi-DI-Ddn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="614/768" id="bOW-NN-Qen"/>
@@ -1928,6 +1925,8 @@
     </scenes>
     <resources>
         <image name=" " width="16" height="16"/>
+        <image name="Parent Icon Text" width="2757" height="3403"/>
+        <image name="Student Icon Text" width="2757" height="3413"/>
         <image name="Teacher Icon Text" width="2757" height="3403"/>
         <image name="accountImage" width="54" height="54"/>
         <image name="anandsir" width="389" height="408"/>
@@ -1959,11 +1958,6 @@
         <image name="image6 3x" width="591" height="1116"/>
         <image name="image7 3x" width="2145" height="492"/>
         <image name="linkedin" width="512" height="512"/>
-        <image name="login theme copy 2" width="150" height="144"/>
-        <image name="login theme copy 2-1" width="87" height="85"/>
-        <image name="login theme copy 3" width="140" height="144"/>
-        <image name="login theme copy 3-1" width="90" height="89"/>
-        <image name="login theme copy-1" width="89" height="88"/>
         <image name="man" width="512" height="512"/>
         <image name="man (1)" width="512" height="512"/>
         <image name="maps" width="256" height="256"/>

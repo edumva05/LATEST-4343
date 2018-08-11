@@ -34,7 +34,7 @@ class AboutUs: UIViewController, UIScrollViewDelegate, ButtonProtocol {
             let testView : UIView = UIView(frame: testFrame)
             testView.alpha=0.5
             self.view.addSubview(uiview1)
-            
+           
             uiview1.alpha = 0
             uiview1.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             uiview1.center.x = self.view.center.x
