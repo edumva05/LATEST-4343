@@ -32,15 +32,35 @@ class ViewController: UIViewController, UITextFieldDelegate{
   
     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
     
-    override func viewDidAppear(_ animated: Bool) {
-           sign.center.y = sign.center.y + 478
+    override func viewDidAppear(_ animated: Bool)
+    {
+
     }
-  
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+ 
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         
        print(self.view.center)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         let animation = CABasicAnimation(keyPath: "position")
         animation.isRemovedOnCompletion = false
@@ -50,9 +70,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
      
         
-        /*animation.fromValue = NSValue(cgPoint: CGPoint(x: sign.center.x, y: sign.center.y))
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: sign.center.x, y: sign.center.y))
         animation.toValue = NSValue(cgPoint: CGPoint(x: sign.center.x, y: sign.center.y + 478))
-        sign.layer.add(animation, forKey: "position")*/
+        sign.layer.add(animation, forKey: "position")
         
   
         
@@ -100,7 +120,7 @@ self.txt2.delegate=self
             animation.timingFunction = CAMediaTimingFunction(controlPoints: 0.86, 0, 0.07, 1.0)
             animation.duration = 0.3
             
-            self.view.center.y = 300
+           // self.view.center.y = 300
 
             
         }
@@ -132,7 +152,7 @@ self.txt2.delegate=self
         txt1.resignFirstResponder()
         
             txt2.becomeFirstResponder()
-            self.view.center.y = 300
+           // self.view.center.y = 300
            
         }
 
@@ -143,7 +163,7 @@ self.txt2.delegate=self
             animation.timingFunction = CAMediaTimingFunction(controlPoints: 0.86, 0, 0.07, 1.0)
             animation.duration = 0.3
             txt2.resignFirstResponder()
-            if(self.view.frame.width == 414)
+           /* if(self.view.frame.width == 414)
             {
                 self.view.center.y = 370
             }
@@ -151,6 +171,7 @@ self.txt2.delegate=self
             {
                 self.view.center.y = 512
             }
+ */
 
 }
         if( txt1.text == "" && txt2.text == ""){
@@ -300,7 +321,7 @@ self.txt2.delegate=self
         
         animation.duration = 0.0
 
-        if(self.view.frame.width == 414)
+       /* if(self.view.frame.width == 414)
         {
             self.view.center.y = 370
         }
@@ -308,7 +329,7 @@ self.txt2.delegate=self
         {
             self.view.center.y = 512
         }
-
+*/
         teach.isEnabled=true
         paren.isEnabled=true
         child.isEnabled=true
