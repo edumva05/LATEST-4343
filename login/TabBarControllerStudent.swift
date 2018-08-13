@@ -1,31 +1,15 @@
 //
-//  TabBarController.swift
-//  FrostedSidebar
+//  TabBarControllerStudent.swift
+//  login
 //
-//  Created by Evan Dekhayser on 8/28/14.
-//  Copyright (c) 2014 Evan Dekhayser. All rights reserved.
+//  Created by EDUMVA2 on 12/08/18.
+//  Copyright © 2018 EDUMVA1. All rights reserved.
 //
 
 import UIKit
 
+class TabBarControllerStudent: UIViewController {
 
-
-class TabBarController: UIViewController, UIGestureRecognizerDelegate {
-    
-
-
-
-    override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
-    }
-    
-    override public var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        return UIInterfaceOrientation.portrait
-    }
-    
-    override public var shouldAutorotate: Bool {
-        return true
-    }
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -73,6 +57,7 @@ class TabBarController: UIViewController, UIGestureRecognizerDelegate {
             self.button_5.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
         }, completion: nil)
         
+        
         let flash = CABasicAnimation(keyPath: "opacity")
         flash.duration = 0.2
         flash.fromValue = 1
@@ -86,16 +71,17 @@ class TabBarController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewWillAppear(_ animated: Bool)
     {
-       super.viewWillAppear(animated)
-    
+        super.viewWillAppear(animated)
+        
     }
- 
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        
         button_1.isUserInteractionEnabled = true
+        
+        
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -106,9 +92,10 @@ class TabBarController: UIViewController, UIGestureRecognizerDelegate {
         
         homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
         cartViewController = storyboard.instantiateViewController(withIdentifier: "CartViewController")
-        profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        profileViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerStudent")
         ideaViewController = storyboard.instantiateViewController(withIdentifier: "IdeaViewController")
         settingsViewController = storyboard.instantiateViewController(withIdentifier: "SettingViewController")
+
         
         //Add stroyboards to array
         viewControllers = [ homeViewController, cartViewController,profileViewController, ideaViewController, settingsViewController]
@@ -159,11 +146,11 @@ class TabBarController: UIViewController, UIGestureRecognizerDelegate {
         },
                        completion: { Void in()  }
         )
-   
+        
     }
-    var selectedIndex: Int = 2
+   
     
-        @IBOutlet weak var viewDisplay: UIView!
+    @IBOutlet weak var viewDisplay: UIView!
     
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet var button_1: UIButton!
@@ -191,7 +178,7 @@ class TabBarController: UIViewController, UIGestureRecognizerDelegate {
         })
     }
     @IBAction func btn2(_ sender: Any) {
-       flip_horizontal()
+        flip_horizontal()
     }
     
     @IBOutlet var button_3: UIButton!
@@ -199,13 +186,13 @@ class TabBarController: UIViewController, UIGestureRecognizerDelegate {
     {
         flip_vertical()
     }
-
     
+     var selectedIndex: Int = 2
     
     @IBAction func didPressTab(_ sender: UIButton) {
         
- 
-
+        
+        
         
         //Keeps track of the previous button
         let previousIndex = selectedIndex
@@ -238,14 +225,12 @@ class TabBarController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
-
+    
     @IBOutlet var button_5: UIButton!
-
+    
     @IBAction func btn5(_ sender: Any) {
         all()
     }
     
     
-    
 }
-

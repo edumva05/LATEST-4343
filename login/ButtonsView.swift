@@ -16,6 +16,7 @@ class ButtonsView: UIView {
     var buttonProtocolDelegate : ButtonProtocol?
     var movingView : UIView?
     var buttonWidths = [CGFloat]()
+    var buttton : [UIButton] = []
     @IBInspectable
     var wordsArray: [String] = [String]() {
         didSet {
@@ -59,11 +60,27 @@ class ButtonsView: UIView {
             
     
             button.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
+            
+            buttton = [button]
+            
+            self.grayColor()
+            
+            
+         
+            
         }
         
 
         scrollView!.contentSize = CGSize(width:currentWidth,height:scrollView!.frame.size.height)
+        
+        
+        
         self.addMovingView()
+    }
+    
+    func grayColor()
+    {
+        
     }
     
     func addMovingView(){
@@ -81,9 +98,9 @@ class ButtonsView: UIView {
     }
     
     func animageMovingView(sender : UIButton){
-        
+
   
-              scrollView!.subviews.forEach ({ ($0 as? UIButton)?.removeFromSuperview() })
+         /*     scrollView!.subviews.forEach ({ ($0 as? UIButton)?.removeFromSuperview() })
         
      
 
@@ -131,10 +148,17 @@ class ButtonsView: UIView {
         
         scrollView!.contentSize = CGSize(width:privatewidth,height:scrollView!.frame.size.height)
 
- 
+ */
+     
       
+        
         sender.setTitleColor(UIColor .black, for: .normal)
+        
+
       
+       
+      
+       
         
         
         UIView.animate(withDuration: 0.20, delay: 0, options: [UIViewAnimationOptions.curveEaseInOut], animations: {

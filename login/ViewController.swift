@@ -538,7 +538,7 @@ animesh=1
         let password = txt2.text
         var inputuser = ""
         
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         
         if bool_student == true
@@ -555,7 +555,7 @@ animesh=1
         }
         
         
-        guard let url = URL(string: "http://192.168.1.188/edumva/Register.php?method=login&username="+user!+"&password="+password!+"&inputuser="+inputuser)
+        guard let url = URL(string: "http://192.168.1.186/edumva/Register.php?method=login&username="+user!+"&password="+password!+"&inputuser="+inputuser)
             
             else { return }
         
@@ -600,13 +600,14 @@ animesh=1
                         if gotopage == "gotopage: teacher"
                         {
                             print("LoggedIn As Teacher")
-                            self.performSegue(withIdentifier: "dbshow", sender: self)
+                      
                             
                         }
                         else if gotopage == "gotopage: student"
                         {
                             print("LoggedIn As Student")
-                            self.performSegue(withIdentifier: "dbshow", sender: self)
+                            let vc = storyboard.instantiateViewController(withIdentifier: "View")
+                            self.present(vc, animated: true, completion: nil)
                         }
                         else if gotopage == "gotopage: parent"
                         {

@@ -1,14 +1,14 @@
 //
-//  dbshow.swift
+//  ViewControllerStudent.swift
 //  login
 //
-//  Created by EDUMVA4 on 14/07/18.
+//  Created by EDUMVA2 on 12/08/18.
 //  Copyright © 2018 EDUMVA1. All rights reserved.
 //
 
 import UIKit
 
-class dbshow: UIViewController {
+class ViewControllerStudent: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

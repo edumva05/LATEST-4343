@@ -24,6 +24,8 @@
 		24962CD521185AAD005DF21F /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24962CD321185AAD005DF21F /* PinterestLayout.swift */; };
 		24A8CA3120FF428C000B5D09 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8CA2E20FF428C000B5D09 /* TabBarController.swift */; };
 		24A8CA3220FF428C000B5D09 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8CA2F20FF428C000B5D09 /* ViewController4.swift */; };
+		643186D8212000D400E30D06 /* ViewControllerStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643186D7212000D400E30D06 /* ViewControllerStudent.swift */; };
+		643186DA2120056600E30D06 /* TabBarControllerStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643186D92120056600E30D06 /* TabBarControllerStudent.swift */; };
 		6435F2972108BD1100BF1C04 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435F2962108BD1000BF1C04 /* ButtonsView.swift */; };
 		6435F29B2108C0CA00BF1C04 /* About_Us.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435F29A2108C0CA00BF1C04 /* About_Us.swift */; };
 		64712D9A20F6036600420C5C /* designableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64712D9920F6036600420C5C /* designableTextField.swift */; };
@@ -40,7 +42,6 @@
 		A52846D120F3686900F35788 /* loginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52846D020F3686900F35788 /* loginUITests.swift */; };
 		A5AC2F692119CF7900F0AFC2 /* ViewControllerAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC2F682119CF7900F0AFC2 /* ViewControllerAbout.swift */; };
 		A5AC2F6D2119D07700F0AFC2 /* but.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC2F6C2119D07700F0AFC2 /* but.swift */; };
-		E442A2EB20FA0F2000B6892D /* dbshow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442A2EA20FA0F2000B6892D /* dbshow.swift */; };
 		E4E807D120FE1B2E001AF0EB /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E807D020FE1B2E001AF0EB /* ViewController2.swift */; };
 		E4E807D520FE1C3E001AF0EB /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E807D420FE1C3E001AF0EB /* ViewController3.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,8 @@
 		24962CD321185AAD005DF21F /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		24A8CA2E20FF428C000B5D09 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		24A8CA2F20FF428C000B5D09 /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		643186D7212000D400E30D06 /* ViewControllerStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStudent.swift; sourceTree = "<group>"; };
+		643186D92120056600E30D06 /* TabBarControllerStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerStudent.swift; sourceTree = "<group>"; };
 		6435F2962108BD1000BF1C04 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		6435F29A2108C0CA00BF1C04 /* About_Us.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_Us.swift; sourceTree = "<group>"; };
 		64712D9920F6036600420C5C /* designableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = designableTextField.swift; sourceTree = "<group>"; };
@@ -105,7 +108,6 @@
 		A52846D220F3686900F35788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5AC2F682119CF7900F0AFC2 /* ViewControllerAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAbout.swift; sourceTree = "<group>"; };
 		A5AC2F6C2119D07700F0AFC2 /* but.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = but.swift; sourceTree = SOURCE_ROOT; };
-		E442A2EA20FA0F2000B6892D /* dbshow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbshow.swift; sourceTree = "<group>"; };
 		E4E807D020FE1B2E001AF0EB /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		E4E807D420FE1C3E001AF0EB /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,15 +224,16 @@
 				2436BFDF2119DE5700F719FC /* ViewControllerReddit.swift */,
 				2436BFE02119DE5700F719FC /* ViewControllerTwitter.swift */,
 				E4E807D020FE1B2E001AF0EB /* ViewController2.swift */,
-				E442A2EA20FA0F2000B6892D /* dbshow.swift */,
 				24A8CA2E20FF428C000B5D09 /* TabBarController.swift */,
 				A5AC2F6C2119D07700F0AFC2 /* but.swift */,
+				643186D7212000D400E30D06 /* ViewControllerStudent.swift */,
 				64F1D885210C786B002B2C46 /* Pulsing.swift */,
 				2436BFE82119DE7B00F719FC /* ViewControllerSocial.swift */,
 				24A8CA2F20FF428C000B5D09 /* ViewController4.swift */,
 				6435F2962108BD1000BF1C04 /* ButtonsView.swift */,
 				6435F29A2108C0CA00BF1C04 /* About_Us.swift */,
 				A52846B020F3686900F35788 /* AppDelegate.swift */,
+				643186D92120056600E30D06 /* TabBarControllerStudent.swift */,
 				A52846B220F3686900F35788 /* ViewController.swift */,
 				A52846B420F3686900F35788 /* Main.storyboard */,
 				64D68F292111F20800E1311C /* ViewControllerExam.swift */,
@@ -411,6 +414,7 @@
 				A5AC2F692119CF7900F0AFC2 /* ViewControllerAbout.swift in Sources */,
 				24962CC721185A5B005DF21F /* ViewModel.swift in Sources */,
 				24A8CA3220FF428C000B5D09 /* ViewController4.swift in Sources */,
+				643186DA2120056600E30D06 /* TabBarControllerStudent.swift in Sources */,
 				A52846B320F3686900F35788 /* ViewController.swift in Sources */,
 				64D68F272111C81300E1311C /* ViewControllerFTP.m in Sources */,
 				64D68F2A2111F20800E1311C /* ViewControllerExam.swift in Sources */,
@@ -420,10 +424,10 @@
 				A52846B120F3686900F35788 /* AppDelegate.swift in Sources */,
 				24962CD021185A85005DF21F /* UnsplashImages.swift in Sources */,
 				6435F29B2108C0CA00BF1C04 /* About_Us.swift in Sources */,
-				E442A2EB20FA0F2000B6892D /* dbshow.swift in Sources */,
 				64F1D886210C786B002B2C46 /* Pulsing.swift in Sources */,
 				64712D9A20F6036600420C5C /* designableTextField.swift in Sources */,
 				2436BFE62119DE5700F719FC /* ViewControllerTwitter.swift in Sources */,
+				643186D8212000D400E30D06 /* ViewControllerStudent.swift in Sources */,
 				2436BFE22119DE5700F719FC /* ViewControllerFacebook.swift in Sources */,
 				24962CD421185AAD005DF21F /* PhotoCell.swift in Sources */,
 				24962CCD21185A85005DF21F /* APIClient.swift in Sources */,
